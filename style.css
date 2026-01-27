@@ -1,0 +1,88 @@
+/* Universal Selector */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+/* BODY */
+html,
+body {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* viewport height */
+    transition: background-color 0.5s;
+}
+
+
+.container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+header h1 { font-size:2rem; margin-bottom:10px; }
+header p { font-size:1rem; margin-bottom:20px; color:#555; }
+
+/* Bulb glow animations */
+#bulb{
+    width: 200px;
+    max-width: 50vw;  /* viewport width */
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#bulb.on{
+    box-shadow: 0 0 40px 20px rgba(255, 223, 0, 0.7); /* for Glow effect */
+    transform: scale(1.05); /* For slight zoom */
+}
+
+
+/* BUttons */
+button{
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s, color 0.3s;
+}
+
+
+
+button:hover {
+    transform: scale(1.1); /* Slight grow on hover */
+}
+
+/* Button colors */
+#on {
+    background-color: #ffd700; /* golden yellow */
+    color: black;
+}
+
+#on:hover {
+    background-color: #ffec80;
+}
+
+#off {
+    background-color: #555; /* dark gray */
+    color: white;
+}
+
+#off:hover {
+    background-color: #777;
+}
+.bulb-section {
+    margin-bottom: 40px; /* Push buttons further down */
+}
+
+
+
+

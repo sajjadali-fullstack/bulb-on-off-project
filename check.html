@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON/OFF Project | SajjadAli</title>
+    <style>
+  
+footer {
+    margin-bottom: -688px;       /* space from main content */
+    text-align: center;      /* center text */
+    font-size: 14px;         /* beginner-friendly size */
+    color: #aaa;             /* light gray text */
+    padding: 10px 20px;      /* some breathing space */
+}
+
+footer a {
+    color: #ffd700;          /* golden link color */
+    text-decoration: none;   /* remove underline */
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffec80;          /* lighter yellow on hover */
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 400px) {
+    footer p {
+        font-size: 12px;     /* smaller text for tiny screens */
+    }
+
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="style.css">
+    <main class="container">
+        <!-- 
+        MARK:Header
+        -->
+        <header>
+            <h1>Interactive Bulb ON / OFF Project</h1>
+            <p>Click the buttons to turn the bulb ON or OFF!</p>
+        </header>
+
+        <section class="bulb-section">
+            <img id="bulb" src="Bulb OFF.png" alt="Bulb in OFF state">
+        </section>
+
+        <section class="btns">
+            <button id="on">ON</button>
+            <button id="off">OFF</button>
+        </section>
+    </main>
+    <footer>
+    <p>Made by Sajjad Ali | 
+        <a href="https://github.com/YourGitHubID" target="_blank">GitHub</a>
+    </p>
+</footer>
+
+
+    <script>
+const bulb = document.getElementById('bulb');
+const onBtn = document.getElementById('on');
+const offBtn = document.getElementById('off');
+const headerTitle = document.querySelector('header h1');
+const headerText = document.querySelector('header p');
+
+// ON Btn
+onBtn.addEventListener('click', () => {
+    bulb.src = 'Bulb ON.png';
+    bulb.classList.add('on');  // Glow effect
+    document.body.style.backgroundColor = 'cornflowerblue';
+    headerTitle.style.color = 'black';
+    headerText.style.color = '#333';
+});
+
+// OFF Btn
+offBtn.addEventListener('click', () => {
+    bulb.src = 'Bulb OFF.png';
+    bulb.classList.remove('on');  // Remove Glow
+    document.body.style.backgroundColor = '#1a1a1a'; // Dark background
+    headerTitle.style.color = 'white';
+    headerText.style.color = '#ccc';
+});
+</script>
+</body>
+</html>
